@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Meal For Your Ingredients</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+  
+  <div class = "container">
+    <div class = "meal-wrapper">
+      <div class = "meal-search">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAApCAMAAACx8kQ6AAAB71BMVEX////+/v79/f3/mir/mCf/pUD/qET/pD7/rlD/nzT/oTj/r1L/njL/nC7/liP6+vr/q0oGDADk5OQAAADz8/MdGRpuQQ9dXV3FxcURERF5eXkaGhrq6uqhoaHR0dHw8PBmZmbe3t5MTEyGhoZwcHCrq6vJyclXV1cwMDC1tbWTk5Nzc3OoqKhAQEAlJSWKiorZdC6bm5s5OTksLCzhXhg7UgAmIRhJSUk2LyI1JRO7u7vFz3b5vnBLQzBheACReTodFAlTagAqHg9MMhVJYABILxPsmTt7bk61axlPLgrZmEvspVJgQh/Xs1V1TyO5fDencDHsxF2JWyasSxXghj7f5a1qRBrxq1+Oo1rR2Y/Ffi4cHw8rGgfgiSjPfSJXTjfZ3c2eqXvX3rO0t6FgcSWKk2Jxd0twTSaCWyybbDX69OX06Mri1LKvpYlPUyk/RxWKnhvr2KbAo016dyWOkElxgy3iv6zQnIDJiGHDjlPar1OojUOWpwi5qTd6jiXdmmW8aDXGYySXkCvBk0PKwWzZjWGajTR1cGCnel+oUSTAURW8djrqslJXWBzecSr+02T6y5Kuoy2EZz/srHWwtEjpk0uhfjyrwnGMgGWQnT7qhT9sfD29nGV5Zjb7/OWRi1xuaiKZXRtYRi6KSB63bRvtD759AAAStElEQVRogb2aiXsaR5bAJXzFimVsCgFFc3TTQDdXI5rICHS1kEECHSAkIxmD5HHsrOSZzXrsnd31kRnL2Y3Xk8RjOfbEk83MhIQ/dF91dUNzSFbm2+z79H3qqlevjl+/qnrV1NDQLyrDffLLtndk8/+vzZ5ADERMR8j7+9w/un9wwMMDmj2qqv+Tl2m66R3y3jW9r1ukX2ar1euyWDiO83g8wWDQ4XBYLI4MSIiI12o2vwcV1GLWxKR2erg756SdtnocIXc4zvN83K02a1L7ZxCTVtvwUYqfLzd/ddP6q1tgfAwsLpCIOyOs3S74UrGYLIpJSWKI2FmMkSZOF/T5OFKeuNMZ8RPhPVZ1eBley/A7Sc4JPFIVa0KCVhUlm81ixFtcViuXccedfpaI38m7g4QeVGf2BNyJOGmEaCLxqNruidvpErPl49t3Ppm9Zhq6efOoMpxA+pROp3MLKyv/tLa3t7+/Xy6XSqU9hNeKqiwvL8gezuI1H43bJSppTZSYwwJjiUrZdo5sIZxPNgIutlKCFlVZiAU9fJIZu5LV68pmFSzyQVJdRobstiINCjnucb3f83tk+O6vf/2bf/7k03+5enXi3nWr687NwebDbmWfoPiwT0oI7+vPK8mQw2M5Zqwc2l+mlSyXsd3DuTxSWq91eY8JQs4JB8DJe+0uLIiBMF7YK5faHVwulvYWUDLMubxOpaS+RK3ZYnkvjeQouOAJGyKrjdV697erq+vrq/cfTFydn5998q8f3/ndrYHmw+FssR+SBqrcBiWFow7uaJca5lCpbbiG+Ywjle1k7OFoKAjWJ+n/sCW20gGVjEdQX/eWSzns93BsuvftLpfTTMJDPP+9LZnv/tu//weRh4/WCafHjx9cnZ2dvffks7mJ398ayDWeHeBNGqj2WFeYSDgEfn1UD7pALaelsL0D+cMPK5hPZIj1SUB5hVwHlBRh+0FBCyvY6bDn+jtezAEpzntkP7U27v7mD09fbBwcHHxZBE6rj+fmHt9f/YKQevLk2ddX790a8E5NfHb5g4FSQkpJf15hWD4aJHNvcA9MHCobLHEMr3zYSVewnw+A9UlAmazgKbrhAsOy2FBxW5ZXGB6A9iuKSkp13uOaAkzjBwfj40/Xfvzz5zB7S+XPH8H0W38wMU986tnE1Xv/+bH354DCe6WiDsrudJO5p27B+ovRgi7yj8P7BtM1lCsakhXEgrWKuW0x1FOJLmarU6mUlnVQdlbaG9S5ZUX0pQeA+mANhwPHrabD5rv/9fKjj16Oj+/9+LrydIP4Vav41VfLy4++uDpxdXb+3r35ifknXzwPeLthm53ZDy6BFEulIvl/6YNSuaTmlFASK1mauYJlSRJT/pBF3fppi16vC0TdrM2ctLKcv6RLMUerUOvLF9cQwQxboWrg0oIjYyVWs0sXr0fGSoXaAii/uHBpkFRQiizmtJnlUimvNVjGzkTmqPVw2OsJ/PeLP34EcrC39+UBUBrfBErF1sF4cX2dkIIVffbqxOyTr2d23Zy5G5Q6wAWEcrRRBVM6JRQTYqhGQaE0BA8LdSQG6LYybImyIomycIp3QKzj4hmkdIbRYXapBmVEAsqRsKsWTIqHUEitxBtgk5CFJXucRmwYMyEu6MZ7bVAROau/QsKj2H4XdVGCMG+f0oHAi3b0UknRpnkfKZPVE36+W93YIJxellsvX4JbjZc+f1QEYJuP1v+0vv7Z7YkJIDUPpO59PTn5PMyZ+kFhhoLKKzJtFED5UhqoSpn0MF/bz0oJElCZMzGsLFTK5fJaGiWdnMvlcfvQwFcPjin7YOrFRaysqBZZJMY5EvBwAsYkq7KiwHpYAl15P53yODJMx6MiLFZ0B6soSnpfr3eBEQQf1kHJTFUHpU/zLkpWLvR8ZmZy8senb7emX30z/nRD9asarOW1jYPx2v3V9T+trn52ODs7P38VQBFSV65Mzjx3WHVQfDZ/FmSBYXLk/1kAhUrkgXiUgGpnuySfw4kgZ+FxupzXsmoLOJXxcB4/OjtIajjms/vjAs6VL9GcS7UcEjKcK5NUKlol+fKKVnxBhAMTU9ESsDTCYQav0eQa45NQWStYYQQ4Ouyrz2Uk4qqWjeyR/rl3890uUAJ5vTW99fabP2icvoMlvEg4/fk+RFOHh4dv3rw5vDcLoecELFdASkVlOgJUVqadqaGU3d4L6mytHgsE43jFkJ+vYNhqgpEjQQksb8fVfJeFL5OBSWXI0kElw+5AF6hogOmA8klprWQJA3+mrIFCadqhfA6WtX5Q7O4iBfVwaxPm2/jB07dv3778DvypePByfJNwWj18MzV169rU1JvD3xNQgOrrSYoq5AJW5vCVaqVSKdclJneGSL4eY9LVtbW1FexjWVQ70y1nm7DXk1EbM0uwKWciiCbyee0/LVLDKTJ/1roszpaxz6eUuiqhigUJ0OAKTRFQiVCGWaPJKuMTYAnXqscx1q+UaRuVGq0+X0GxQR7lHJtZ3CWgygeEE0y/6Vevtj5/fL8IO+BHRYii1j87nJqaunZt6trUG/CpiYnbt29v35m5QlBNPg9Yh8ycPamegVM6qHQsJSbhYJyM2f2RPlBn8sgnKzs9mWs4HvBroGp0lPnqGR0U60xm8z21VDGu9mEibCSWd3eBygSlNigy25o6KLkNqi0ViBrUHbZnMedSY9IuQfXThopJ9avNubkymYEvv7r/WHOo69emroNP3Zufv729/bvtb7/99IqKavfdx+rhnPfb7XYpd45IPhfzQX9Yu5318zyqneuVnIgqZ8jDmdqCUs2rebDXJFhE9bXsDvlXxmdoEkBFUFN9PlPKKWvUooywVjW4YF6vu1ZVkioomlxQwzePtEaTAIp16roziIAqGXuWX0GSD+Z5f3BrCkljY5Mw/1Y2xmExV6cfgNpXl6rvHpEjDAE1NXX9+vVr164f/mX7NlDa3v52G3xqBhDPzLjMLk8mEXc6nUkdlCywficRPhHWQeUrFR3ZGqPQx1odIW3YTQzLkA4KkXHl63oSp/yCbgG7W4VaVFBOw1Mq5FYaWt0LWBQMoAo0zu2AssO013TnkMiyStd7zDfrGGYeOWz1huZmfmxsTJpZXPzp7fT0Fqzf38Ei9fmLjT9+t7W1vLp6f27ui0MV1NT1W3+79eYv298Sf7rzyZ3d3cXFmRuXLzvNZq/Fkwm4Ewk5N0IkX5AFPx9OuN3uQCiKamrmuRzGCn0caeJ0nj6gXO0cVVcx6xQQ1deQ0mxWIC6jOgJKzlGLCl7QLPIFVNX0ChbxAtWP5JiUwMajTIUm26BoEkBF4rruHHiUXe+TJucaVRyjAWfvGcYlAKmxK7uvv1FBbW69ejUNGx78A1DAaW7uGVCCNYp41eGDO9vb/wP+tLgI8/UySIobNhFSQYcjE6Ogzq2I8FKiGYfDEfRkNFBlLKeY6ojOhz60KtrwRhpp2R7pgIIVT0pKehKmnlTQTJu6xU4daQO24VgqppR0UD5Yi0NdoIKcZGuDcjqZJk2QNUrI7miE2qjglQ0ENWzhJYJqcvH76emDA5h/r96Ob8JitQmbHmD66+6Dw6lrf4PF/Drse5/ufgJ/fwdKNwimy1c8w3CKMNNvwL7ceSIj1STZajwcZ7G4HKimZtpgk0qm1cfzS4gWPD8yov1vVMjOJiCa3EFyLOUTZETVKqiVEaMFkK1iAKUmCrDn21GT2gIoOH07mMp5TaeBokkbJMGJtGZg1/NlG+pzq14vtEZoX9JiPDTwS4U54yOkpN2/PxyH+Te9Nb65RRf14uO5v75+PXf4BmbdFIkPfoBlSfclInKIbA3gU+QTllfQQNkk6B3Eg3DMsHo0UFXsE5L1NiiNEJUGrAywrDkNoMhukNKSEI4Rj+qyqIAF1mCQPd+O26AEPywxXaAcRlD+ZDpPEy2IXlIaqCaSJKVF8yF8UT+dDfhQYoloTvX6IYDaPDgoEk5k0dr88ptX0/efvSEB5+GzHwimmRsapRuphHboGyaozADqAhH1vRHvJYddAKVmAii7WFcfLyyhdONCW863cliCfdIPiznN2YGIno3wwE1LplgxZ7AYaRKLFLZRfQuJgpilzVzIqW0DKJokoGCjwTaahGBcws0L7YQg1mm9TRSLoabevDBoNdecKkVIQVAF829zY+MprOpvp39LdkFYrL7f/eHBs2cPfuiiFOODhprgiJtwSrlRIhcqWJZT9OszAaVmVrHAynX1cXQJKa1RTS60CghJSdiqWJhrNG8HSTE/7/ShC1pSFnz1nbbFkmoh+5KFBs2pwFbYpGVHc1iOhHkIAWiyANPWjuu5Jk02sZLTS54vYEapF2iqCedpvbrzKMW7g0d9aPFExrT59/3+ixc/vVCjhS0I1SEEfT0zs6tOOZ3S5RtsoOsLwpCFxQjXtd41c4VCnXHAsdUalhEdYRWJKdwGhSr6sBu2ukLO/TFWUuqafkdBsGRJWOPWQBjLqNm2qNYV8p0gllK0kV3YabUxAkRZwABOT2JJqu40NDiN1k5DL7lTl1A7uVNptnRNA8WO+dAyNBRSVyqYfyQ4+vGnA7JaHWxsjE+/3u1emK4IbktvHUGp2ThllCaKOjyuECrYaP5SQUHVJaprwCG+u/SpnMzipU5ytColqw2tzGhjx4aS9QvdFnVZQM1T/TK6xDC2xqieauwUkG1AsVOnKkju7QWVFoQj4WNAmTi/pM0/QPXj3vS0OgtfvF5cfKdvciAzfNDbV8OwQ1rqbm0JxQMOLoR22gOw1dvPp3LINtpVvC52gTplY6SKIdnEPphMXRaKzCbTgwa6g5kugLbBoBqKFOuFT6XC+PzxjOeYnzLMmlON7RJUu6+/f/hwfw+cqe1LN2acjoHmBNTpLllCkXAgGEA77Zym0nkuMNg2aijdUETYtzppeN1SxVgbZmO4cspoQaLFrkp0LYCyGXtiQ4XT/dIo4FisPjpIU5eEYz2KiIduf2T+Lc6QUOBdZ/lWF6YjPrmbMlKru7nWZfL5qxtUp0hBFLGt0Sm9o8TsjAHUadiujaNtKXZ7jwUEQREftrXhNZbaGqaLzGBQNhTzxeqn+hWnqiglRN4HCpwq1Ub17p1h+Z60Ry1HWwKopdMXja8FfCCSyATw0kVdmkrnuSD6ZFxvNk5r6SXFZ5dsFztCQDX0YVy82FIgrooZLZoQWDp5AaeXSNZpCMUAx0WibWEmp5cifbKh9MUeaSzlcIx8cGmcPt2tOd0CTxPsPMRe7/lh2sTRQB3Of53l+4Yv7LEea+WQCjZdqtUC2fXIV50Q08nOoc6zIvoEXxLVbc2dhjpsLECUZbMZCscU2DurVZosgN7vtBssbOQ7QDjhl1Aaqi3UEVY00wIjKlVDVWlyclyC/U1j0mg1ITAATjB1cwXbT80lTXWaaBT6OTVwgh8RrSH19DfWphSLe7zvMTJ5wyL9KAWHNAnCIhlCRhL4xUXIxVRk3BYJHCTiZGWGURSICuqXYdhskmkXxfBafTFZvexBk3ZyzI77OxYSDCcaCoX9MQljRvb5JN085RM7LUF/UpJqRO3q8E/FBODj/hRpU+mIpuHdgyPzXrHwYhvU5POM670GQyazyxMKO1l7R8jtEAfH9WbrWuhmOBx3sj5ZJCLYI7ya7pRg/eSSSad8OBoKuA0W8CJCwWAmGnb6WWqgl1avrRgaJQkhFVPNxKScEgTynvhEACrkIyx5JWIyKYoAiWj82q/SJ/j93hoUpDGVUshy7JTTZdjs5RxRiIg7wofdGQ8clXuydW0cukkGzjv99NINn4gG3IaiPB+Px/l2Oh4OZIJBR8cCyAXIiyBXodRiPK+XJqZ8T6Pk/hDbFj90LxoKeoIht3rtp63yq5oM+QH0JL9KDw15o77J527upNdfhs1WF3Q56m5LNBqC5lxeS3d2Wx3KBD0eokuEyajiYXfI4cgYikYJyEBUzwjAsAC70YKMx+UiWYEoabBdGp4CgZ5GE+CvxIxIPB5OREMODwf1QZMJVdelOfaCUreYLFx/XHlMcbMXuqxesyMSBCH3oaxWL3RGzzUI0bpcRJfJhMi4SL85Qw0OwlG/uUcq9HAur1etLRPSLfQGSDEooVkbHvXewDsg9/4IPwI0RF5Tuz5VF6ASyqiak99a+7kybDKTn7stHdF/KlfvK/YL+Qaj6tSbjCAAzttVA/19vKe6Lgv1zhdkqWbG0kZDTTjdippy5CKe3jujTtOc1J/+IVLqR6mO0HuXpp5cg1q9PWmlVwd0Dj0V9FZHTIwW6vUOvZixeF+jXt2KmtIbpfqHNINO1/xioIa6b+J2bpwcdUdYVxrumR4vw3ojHQst68hryF2XXLpFv+PRe9vVeNnmlyM1+F55/41zg7Y7p7fEe6o7voXj5Wjb3mH9L9vi/bk5LwFWAAAAAElFTkSuQmCC">
+        <h2 class = "title">Welcome to TheMeal</h2>
+        <blockquote>Eat Good, Eat Safe. Always! Now with the EatSure promise.<br>
+          <cite>To keep your food safe and hygienic, here are some proactive steps that we have been taking.</cite>
+        </blockquote>
+
+        <div class = "meal-search-box">
+          <input type = "text" class = "search-control" placeholder="Search for a meal..." id = "search-input">
+          <button type = "submit" class = "search-btn btn" id = "search-btn">
+            <i class = "fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class = "meal-result">
+        <h2 class = "title">Your Search Results:</h2>
+        <div id= "meal">
+          <!-- meal item -->
+          <!-- <div class = "meal-item">
+            <div class = "meal-img">
+              <img src = "food.jpg" alt = "food">
+            </div>
+            <div class = "meal-name">
+              <h3>Potato Chips</h3>
+              <a href = "#" class = "recipe-btn">Get Recipe</a>
+            </div>
+          </div> -->
+          <!-- end of meal item -->
+        </div>
+      </div>
+
+
+      <div class = "meal-details">
+        <!-- recipe close btn -->
+        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+          <i class = "fas fa-times"></i>
+        </button>
+
+        <!-- meal content -->
+        <div class = "meal-details-content">
+          <!-- <h2 class = "recipe-title">Meals Name Here</h2>
+          <p class = "recipe-category">Category Name</p>
+          <div class = "recipe-instruct">
+            <h3>Instructions:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+          </div>
+          <div class = "recipe-meal-img">
+            <img src = "food.jpg" alt = "">
+          </div>
+          <div class = "recipe-link">
+            <a href = "#" target = "_blank">Watch Video</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src = "script.js"></script>
+</body>
+</html>
