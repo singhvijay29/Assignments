@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Debouncing</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body {
+    font-family: sans-serif;
+    background-image: url("https://i.pinimg.com/originals/d9/af/b2/d9afb2f0c922f34cb6ae8ad219f53ca3.gif");
+}
+
+* {
+    box-sizing: border-box;
+}
+.container {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#charactersList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+.character {
+    list-style-type: none;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'name image'
+        'house image';
+    text-align: left;
+}
+
+.character > h2 {
+    grid-area: name;
+    margin-bottom: 0px;
+}
+
+.character > p {
+    grid-area: house;
+    margin: 0;
+    margin-top: -18px;
+}
+
+.character > img {
+    max-height: 100px;
+    grid-area: image;
+}
+
+#searchBar {
+	width: 500px;
+height: 50px;
+margin-bottom: 50px;
+background-color: white;
+border-radius: 30px;
+    border: 1px solid #eaeaea;
+	border: 5px solid red;
+    padding: 5px 10px;
+    font-size: 12px;
+	position: absolute;
+	margin:0;
+	top: 40%;
+	left: 25%;
+	right: 75%;
+}
+i {
+font-size: 30px;
+margin-top: 15px;
+color: #777;
+position: absolute;
+top: 75%;
+right: 50%;
+left: 75%;
+}
+
+#searchWrapper {
+    position: relative;
+}
+.imgstyle {
+	width: 70%;
+}
+
+
+</style>
+<body>
+	<div class="container">
+		<h1><img src="C:\Users\singh\Downloads\harrypoter.png" class="imgstyle"></h1>
+		<div id="searchWrapper">
+			<input
+				type="text"
+				name="searchBar"
+				id="searchBar"
+				placeholder="search for a character"
+			/><i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+		<ul id="charactersList"></ul>
+	</div>
+</body>
+</html>
+<script>
+
+const charactersList = document.getElementById('charactersList');
+const searchBar = document.getElementById('searchBar');
+let hpCharacters = [];
+
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredCharacters = hpCharacters.filter((character) => {
+        return (
+            character.name.toLowerCase().includes(searchString) ||
+            character.house.toLowerCase().includes(searchString)
+        );
+    });
+    displayCharacters(filteredCharacters);
+});
+
+const loadCharacters = async () => {
+    try {
+        const res = await fetch('https://hp-api.herokuapp.com/api/characters');
+        hpCharacters = await res.json();
+        // displayCharacters(hpCharacters);
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+const displayCharacters = (characters) => {
+    const htmlString = characters
+        .map((character) => {
+            return `
+            <li class="character" style="margin-top:100px;">
+                <h2>${character.name}</h2>
+                <p>House: ${character.house}</p>
+                <img src="${character.image}"></img>
+            </li>
+        `;
+        })
+        .join('');
+    charactersList.innerHTML = htmlString;
+};
+
+loadCharacters();
+
+</script>
+
