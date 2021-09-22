@@ -1,0 +1,25 @@
+db.users.insert({"first_name": "lonni","last_name": "trun", "email": "ass@gmail.com", "ip_address": 1233,"age": 23})
+db.users.insert({"first_name": "sim","last_name": "lovn", "email": "ass@gmail.com", "ip_address": 1233,"age": 23})
+db.users.insert({"first_name": "messu","last_name": "n", "email": "ass@gmail.com", "ip_address": 1233,"age": 23})
+db.users.insert({"first_name": "rold","last_name": "bron", "email": "ass@gmail.com", "ip_address": 1233,"age": 23})
+db.users.insert({"first_name": "kim","last_name": "own", "email": "ass@gmail.com", "ip_address": 1233,"age": 23})
+db.users.insert({"first_name": "lonni","last_name": "brown", "email": "ass@gmail.com", "ip_address": 1233,"age": 23})
+db.users.insertMany([{"first_name": "sue","last_name": "br", "email": "ass@gmail.com", "ip_address": 1233,"age": 23},{"first_name": "lonni","last_name": "brown", "email": "ass@gmail.com", "ip_address": 1233,"age": 23},{"first_name": "lonni","last_name": "brown", "email": "ass@gmail.com", "ip_address": 1233,"age": 23}])
+
+
+db.users.findOne({"first_name": "lonni"})
+
+db.users.updateMany({"first_name": "lonnie"}, {$set: {"first_name": "karl"}})
+
+db.users.updateMany({"age": 23}, {$set: {"age": 25}})
+
+db.users.deleteOne("first_name":"karl")
+
+db.users.remove("first_name":"karl")
+
+db.users.deleteMany()
+
+
+
+db.dropDatabase();
+
